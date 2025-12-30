@@ -1,4 +1,6 @@
-﻿namespace JCMSoft.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace JCMSoft.Domain.Entities
 {
     public class Departamento
     {

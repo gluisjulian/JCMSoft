@@ -16,5 +16,13 @@ namespace JCMSoft.EFCore.Context
         {
             optionsBuilder.UseSqlServer(AppConfig.GetConnectionString());
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Departamento>(x => {
+                x.Property(x => x.Nome).HasMaxLength(200);
+                x.Property(x => x.Descricao).HasMaxLength(500);
+            });
+        }
     }
 }
